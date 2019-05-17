@@ -10,17 +10,21 @@ BeerDetailView.prototype.createBeerDetail = function(beer){
   name.textContent = beer.name;
   beerDetail.appendChild(name);
 
-  const tagline = document.createElement('p');
+  const tagline = document.createElement('h4');
   tagline.textContent = beer.tagline;
   beerDetail.appendChild(tagline);
+
+  const beerImage = document.createElement('img');
+  beerImage.src = beer.image_url;
+  beerDetail.appendChild(beerImage);
 
   const description = document.createElement('p');
   description.textContent = beer.description;
   beerDetail.appendChild(description);
 
-  const beerImage = document.createElement('img');
-  beerImage.src = beer.image_url;
-  beerDetail.appendChild(beerImage);
+  const lineBreak = document.createElement('br');
+  beerDetail.appendChild(lineBreak);
+  beerDetail.appendChild(lineBreak);
 
   return beerDetail;
 };

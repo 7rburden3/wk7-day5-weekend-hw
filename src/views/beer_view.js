@@ -6,9 +6,15 @@ const BeerView = function(container){
 };
 
 BeerView.prototype.bindEvents = function(){
-  PubSub.subscribe('Beers:beers-data-ready', (event) => {
+  // PubSub.subscribe('Beers:beers-data-ready', (event) => {
+  PubSub.subscribe('Beers:beers-ready', (event) => {
+    this.clearList();
     this.renderBeerDetailViews(event.detail);
   });
+};
+
+BeerView.prototype.clearList = function () {
+  this.container.innerHTML = '';
 };
 
 BeerView.prototype.renderBeerDetailViews = function(beers){

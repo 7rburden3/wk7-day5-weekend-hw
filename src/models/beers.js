@@ -43,7 +43,7 @@ Beers.prototype.uniqueABVList = function(){
 
 Beers.prototype.beersByABV = function (abvIndex){
   const selectedABV = this.alcoholByVolume[abvIndex];
-  return this.beerData.filter((beer) => {
+  return this.beersData.filter((beer) => {
     return beer.abv === selectedABV;
   });
 };

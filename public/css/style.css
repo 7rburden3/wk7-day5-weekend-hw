@@ -3,6 +3,13 @@ body {
   background-color: #F8F8F8;
 }
 
+
+
 img {
-  width: 20%;
+  /* float:left; */
+  width: 10%;
 }
+
+/* p {
+  float: left;
+} */
