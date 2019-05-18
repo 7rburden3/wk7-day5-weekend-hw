@@ -24,11 +24,7 @@ BeerDetailView.prototype.createBeerDetail = function(beer){
 
   const lineBreak = document.createElement('br');
   beerDetail.appendChild(lineBreak);
-  beerDetail.appendChild(lineBreak);
-
   return beerDetail;
 };
-
-//BeerDetailView.prototype.createSideElement = function()
 
 module.exports = BeerDetailView;

@@ -4,13 +4,17 @@ body {
   width: 100%;
 }
 
-
-
 img {
   float:left;
-  width: 10%;
+  width: 6%;
+  margin-right: 10px;
+  margin-bottom: 40px;
 }
 
 p {
-  width: 50%;
+  width: 90%;
+}
+
+br {
+  clear: both;
 }
