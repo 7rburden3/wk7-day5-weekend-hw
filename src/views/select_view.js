@@ -6,7 +6,8 @@ const SelectView = function(selectElement){
 
 SelectView.prototype.bindEvents = function(){
   PubSub.subscribe('Beers:abv-ready', (event) => {
-    this.populateSelect(event.detail);
+    // sort abv into ascending order
+    this.populateSelect(event.detail.sort(function(a, b){return a-b}));
   });
 
   this.selectElement.addEventListener('change', (event) => {
@@ -17,7 +18,7 @@ SelectView.prototype.bindEvents = function(){
 
 SelectView.prototype.populateSelect = function(alcoholByVolume){
   alcoholByVolume.forEach((abv, index) => {
-    const option = this.createABVOption(abv, index);
+  const option = this.createABVOption(abv, index);
   this.selectElement.appendChild(option);
 });
 };

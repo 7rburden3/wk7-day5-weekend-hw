@@ -6,7 +6,7 @@ BeerDetailView.prototype.createBeerDetail = function(beer){
   const beerDetail = document.createElement('div');
   beerDetail.classList.add('beer');
 
-  const name = document.createElement('h3');
+  const name = document.createElement('h2');
   name.textContent = beer.name;
   beerDetail.appendChild(name);
 
@@ -28,5 +28,7 @@ BeerDetailView.prototype.createBeerDetail = function(beer){
 
   return beerDetail;
 };
+
+//BeerDetailView.prototype.createSideElement = function()
 
 module.exports = BeerDetailView;

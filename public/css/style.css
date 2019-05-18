@@ -1,15 +1,16 @@
 body {
   font-family: Monaco;
   background-color: #F8F8F8;
+  width: 100%;
 }
 
 
 
 img {
-  /* float:left; */
+  float:left;
   width: 10%;
 }
 
-/* p {
-  float: left;
-} */
+p {
+  width: 50%;
+}
